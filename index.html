@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body id="rty">
+    <center><label>Enter A Number Of Table</label><br><br>
+    <input type="number" id="put"><br><br>
+    <label>Enter Mutiplier Number</label><br><br>
+    <input type="number" id="not"><br><br>
+    <button onclick="submit()" id="fk">Print</button><br><br>
+    <div id="result"></div>
+</center>
+    
+    <script>
+        function submit() {
+            let put = document.querySelector('#put').value;
+            let not = document.querySelector('#not').value;
+            let result = '';
+
+            for (let i = 0; i < not; i++) {
+                result = `${result} ${put} x ${ i + 1 }=${ put* (i + 1) } \n`
+            }document.getElementById('result').innerText =result  
+
+        }
+
+    </script>
+
+</body>
+
+</html>
